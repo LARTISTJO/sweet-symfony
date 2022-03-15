@@ -3,6 +3,9 @@
 {% block body %}
     <h1>sweetness</h1>
 
+    <div>{{ mySerie.title }} {{ autreVar }}</div>
+    <span>{{ mySerie.year | round }}</span>
+
     <div>{{ "now" | date('Y') }}</div>
     <div> {# crée une variable ! #}
         {% set name = "Lartist" %}

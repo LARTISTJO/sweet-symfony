@@ -21,6 +21,12 @@ class MainController extends AbstractController
      */
     public function sweethome()
     {
-        return $this->render("main/sweet.html.twig");
+        $serie = [
+            "title" => "1883",
+            "year" => 2021 ];
+        return $this->render("main/sweet.html.twig", [
+            "mySerie" => $serie,
+            "autreVar" => 412412
+        ]);
     }
 }

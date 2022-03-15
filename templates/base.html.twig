@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Sweet!{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="icon" href="{{ asset('img/icon.png') }}">
 </head>
 <body>
-<header>
-    <h1>Sweet!</h1>
-</header>
-<main>
-    {% include("inc/nav.html.twig") %}
-    {% block body %}{% endblock %}
-</main>
-<footer>
-    {% include("inc/nav.html.twig") %}
-    <div>&copy; {{ "now" | date("Y") }} Sweet!</div>
-</footer>
+<div class="container">
+    <header>
+        <h1><a href="{{ path("main_home") }}"><img src="{{ asset("img/logo.svg") }}" alt="Sweet!"></a></h1>
+        {% include("inc/nav.html.twig") %}
+    </header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    <footer>
+        {% include("inc/nav.html.twig") %}
+        <div>&copy; {{ "now" | date("Y") }} Sweet!</div>
+    </footer>
+</div>
 </body>
 </html>
