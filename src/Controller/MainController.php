@@ -16,17 +16,4 @@ class MainController extends AbstractController
             return $this->render("main/home.html.twig");
         }
 
-    /**
-     * @Route("/sweet", name="main_sweethome")
-     */
-    public function sweethome()
-    {
-        $serie = [
-            "title" => "1883",
-            "year" => 2021 ];
-        return $this->render("main/sweet.html.twig", [
-            "mySerie" => $serie,
-            "autreVar" => 412412
-        ]);
-    }
 }
